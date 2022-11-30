@@ -25,8 +25,9 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
 
+# End of first section
 # exit script here
-streamlit.stop()
+#streamlit.stop()
 
 #Create a repeatable block of code (called a function)
 def get_fruityvicedata(this_fruit_choice):
@@ -45,14 +46,11 @@ try:
     back_from_function = get_fruityvicedata(fruit_choice)
     # output it to the screen as a table
     streamlit.dataframe(back_from_function)
-    
-    #  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)      
-    #  fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())      
-    #  streamlit.dataframe(fruityvice_normalized)
 
 except URLError as e:
       streamlit.error()  
     
+# end of second section
 # exit script here
 streamlit.stop()
     
