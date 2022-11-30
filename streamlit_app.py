@@ -52,7 +52,7 @@ except URLError as e:
     
 # end of second section
 # exit script here
-streamlit.stop()
+#streamlit.stop()
 
 streamlit.header("The fruit load list contains:")
 # exit script here
