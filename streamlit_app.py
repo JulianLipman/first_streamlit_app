@@ -25,6 +25,9 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
 
+# exit script here
+streamlit.stop()
+
 #Create a repeatable block of code (called a function)
 def get_fruityvicedata(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
